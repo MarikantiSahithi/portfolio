@@ -4,41 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sahithi Marikanti | AI Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
   scroll-behavior: smooth;
 }
 
 nav {
   position: fixed;
   width: 100%;
-  background: rgba(15,23,42,0.95);
-  padding: 15px 40px;
+  padding: 20px 10%;
   display: flex;
   justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.7);
   z-index: 1000;
 }
 
 nav a {
-  color: #e2e8f0;
+  color: white;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 30px;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: #38bdf8;
 }
 
-.section {
-  padding: 100px 10%;
+section {
+  padding: 120px 10%;
 }
 
 .hero {
@@ -49,58 +55,72 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 52px;
-  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
 }
 
 .hero h2 {
+  font-size: 24px;
   font-weight: 400;
+  margin-top: 10px;
   color: #38bdf8;
 }
 
+.hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  color: #cbd5e1;
+}
+
 .button {
-  margin-top: 25px;
-  padding: 12px 25px;
+  margin-top: 30px;
+  padding: 12px 28px;
+  border-radius: 30px;
   background: #38bdf8;
   color: #0f172a;
-  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
 }
 
 .card {
-  background: #1e293b;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 20px;
   margin-bottom: 30px;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 h3 {
   color: #38bdf8;
+  margin-bottom: 15px;
 }
 
-.skills-grid {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 footer {
   text-align: center;
   padding: 40px;
-  background: #020617;
+  color: #94a3b8;
   font-size: 14px;
 }
 
-@media (max-width:768px){
-.hero h1 { font-size: 36px; }
-.section { padding: 80px 8%; }
+@media(max-width:768px){
+  .hero h1 { font-size: 38px; }
 }
 </style>
 </head>
@@ -119,134 +139,114 @@ footer {
 </nav>
 
 <!-- HERO -->
-<section class="section hero">
+<section class="hero">
   <h1>AI Engineer</h1>
-  <h2>Architecting Generative AI & Multi-Agent Systems</h2>
+  <h2>Building Generative AI & Multi-Agent Systems</h2>
   <p>
-    4+ years of experience building production-grade GenAI systems, RAG architectures,
-    and multimodal AI platforms using LlamaIndex, LangChain, and vector databases.
+    4+ years of experience designing production-grade GenAI platforms,
+    Retrieval-Augmented pipelines, and multimodal AI systems integrating
+    LLMs, vector databases, and structured data workflows.
   </p>
-  <a href="#contact" class="button">Let's Connect</a>
+  <a href="#contact" class="button">Connect With Me</a>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Me</h2>
+<section id="about">
   <div class="card">
+    <h3>About Me</h3>
     <p>
-      I am an AI Engineer specializing in Generative AI, Retrieval-Augmented Generation (RAG),
-      and multi-agent orchestration systems. I architect scalable AI solutions integrating text,
-      image, and structured data retrieval pipelines.
-    </p>
-    <p>
-      At Innovision LLC, I designed and deployed ComFit Copilot — a multimodal GenAI platform
-      combining LlamaIndex, FastAPI, hybrid vector databases, and retrieval-based correction
-      workflows to reduce hallucinations by 40% and achieve 90%+ retrieval accuracy.
+      I architect intelligent systems that combine LLM reasoning,
+      vector retrieval, and multi-agent orchestration. At Innovision LLC,
+      I developed ComFit Copilot — a domain-specialized multimodal AI platform
+      that reduced hallucinations by 40% and achieved 90%+ retrieval accuracy.
     </p>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <h2>Professional Experience</h2>
+<section id="experience">
+  <h3>Experience</h3>
 
   <div class="card">
-    <h3>Innovision LLC — AI Engineer (2025–Present)</h3>
-    <ul>
-      <li>Architected ComFit Copilot, a multimodal GenAI platform integrating LLMs, vector search, and 3D model retrieval.</li>
-      <li>Designed multi-agent research workflows with planning, routing, and strategy selection agents.</li>
-      <li>Built hybrid RAG pipelines using DuckDB, ChromaDB, and Qdrant.</li>
-      <li>Implemented Retrieval-Augmented Correction reducing hallucinations by 40%.</li>
-      <li>Developed LLM evaluation framework (LLM-as-judge) for faithfulness & contextual accuracy.</li>
-      <li>Benchmarked embedding models achieving 90%+ retrieval accuracy.</li>
-    </ul>
+    <h3>Innovision LLC — AI Engineer</h3>
+    <p>
+      Architected and deployed ComFit Copilot, integrating LlamaIndex,
+      hybrid RAG pipelines (DuckDB, ChromaDB, Qdrant), multi-agent research workflows,
+      and LLM-based evaluation systems.
+    </p>
   </div>
 
   <div class="card">
-    <h3>Protominds Software Solutions — Data Scientist (2022–2024)</h3>
-    <ul>
-      <li>Built time-series forecasting models (ARIMA, Prophet) in Azure Databricks.</li>
-      <li>Developed regression & clustering models for throughput optimization.</li>
-      <li>Automated ETL pipelines integrating MES, ERP, and manufacturing data.</li>
-      <li>Created Power BI dashboards for operational KPI tracking.</li>
-    </ul>
+    <h3>Protominds Software Solutions — Data Scientist</h3>
+    <p>
+      Built time-series forecasting systems (ARIMA, Prophet) in Azure Databricks,
+      engineered regression & clustering models, and automated ETL workflows
+      for large-scale manufacturing analytics.
+    </p>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Featured Projects</h2>
+<section id="projects">
+  <h3>Featured Projects</h3>
 
-  <div class="card">
-    <h3>ComFit Copilot</h3>
-    <p>
-      Domain-specialized multimodal GenAI platform enabling semantic retrieval across
-      structured data, documents, images, and 3D models.
-    </p>
-    <p><strong>Tech:</strong> LlamaIndex, FastAPI, Qdrant, DuckDB, ChromaDB, Supabase</p>
-  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>ComFit Copilot</h3>
+      <p>Multimodal GenAI platform enabling structured, document, image & 3D retrieval.</p>
+    </div>
 
-  <div class="card">
-    <h3>Agentic Fitness Coach</h3>
-    <p>
-      Multi-agent AI system built using LangGraph & LangChain with RAG-based context retrieval
-      and GPT-4o vision integration.
-    </p>
-    <p><strong>Tech:</strong> LangChain, LangGraph, FastAPI, Streamlit, ChromaDB</p>
-  </div>
+    <div class="card">
+      <h3>Agentic Fitness Coach</h3>
+      <p>LangGraph-powered multi-agent AI system with RAG and vision integration.</p>
+    </div>
 
-  <div class="card">
-    <h3>AI Resume Analysis Tool</h3>
-    <p>
-      AI-powered resume evaluator using SBERT semantic similarity and BM25 ranking
-      with Llama-3 integration for ATS feedback.
-    </p>
-    <p><strong>Tech:</strong> React, Node.js, Python, SBERT, Llama-3</p>
+    <div class="card">
+      <h3>AI Resume Analysis Tool</h3>
+      <p>Semantic similarity scoring using SBERT & Llama-3 for ATS optimization.</p>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Technical Skills</h2>
-  <div class="skills-grid">
+<section id="skills">
+  <h3>Technical Stack</h3>
+
+  <div class="grid">
     <div class="card">
-      <h3>GenAI & Agents</h3>
-      <p>RAG, AI Agents, Agentic Workflows, LlamaIndex, LangChain, MCP, RAC</p>
+      <strong>GenAI & Agents</strong>
+      <p>RAG, LlamaIndex, LangChain, MCP, RAC</p>
     </div>
+
     <div class="card">
-      <h3>Vector Databases</h3>
+      <strong>Vector Databases</strong>
       <p>Qdrant, ChromaDB, DuckDB, Supabase</p>
     </div>
+
     <div class="card">
-      <h3>ML & Modeling</h3>
-      <p>Time-Series Forecasting, Regression, Clustering, Bayesian Modeling</p>
+      <strong>Frameworks</strong>
+      <p>FastAPI, PyTorch, Scikit-learn</p>
     </div>
+
     <div class="card">
-      <h3>Frameworks</h3>
-      <p>FastAPI, PyTorch, Scikit-learn, Hugging Face</p>
-    </div>
-    <div class="card">
-      <h3>Cloud & DevOps</h3>
+      <strong>Cloud & DevOps</strong>
       <p>Azure, AWS, Git, CI/CD</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
+<section id="contact">
   <div class="card">
+    <h3>Contact</h3>
     <p>Email: sahithimarikanti08@gmail.com</p>
     <p>Phone: +1 513-237-8518</p>
-    <p>
-      LinkedIn: <a href="https://www.linkedin.com/in/sahithimarikanti" target="_blank" style="color:#38bdf8;">Profile</a>
-    </p>
-    <a href="#" class="button">Download Resume</a>
+    <p>LinkedIn: linkedin.com/in/sahithimarikanti</p>
   </div>
 </section>
 
 <footer>
-  © 2026 Sahithi Marikanti | AI Engineer Portfolio
+© 2026 Sahithi Marikanti | AI Engineer
 </footer>
 
 </body>
